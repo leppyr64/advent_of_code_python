@@ -3,22 +3,19 @@
 
 def process_case(inp, depth):
     mem = {}
-    mem2 = {}
     digits = [int(x) for x in inp.split(',')]
+    
     idx = 1
-    for nxt in digits:
-        mem[nxt] = idx
+    for d in digits[:-1]:
+        mem[d] = idx
         idx += 1
-        last = nxt
-
-    while idx <= depth:
-        if last not in mem2:
+    last = digits[-1]
+    while idx < depth:
+        if last not in mem:
             nxt = 0
         else:
-            nxt = mem[last] - mem2[last]
-        if nxt in mem:
-            mem2[nxt] = mem[nxt]
-        mem[nxt] = idx
+            nxt = idx - mem[last]
+        mem[last] = idx
         idx += 1
         last = nxt
     return last
