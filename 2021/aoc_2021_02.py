@@ -5,13 +5,13 @@ from itertools import combinations
 
 f = open('./2021/input/02.txt')
 lines = f.read().splitlines() 
-lines = [s.split(' ') for s in lines]
 f.close()
 
 depthp1 = 0
 pos = 0
 aim = 0
 depthp2 = 0
+lines = [s.split(' ') for s in lines]
 
 for step, d in lines:
     d = int(d)
