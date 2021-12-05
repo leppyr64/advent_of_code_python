@@ -3,7 +3,7 @@
 
 from itertools import combinations
 
-f = open('./2021/input/03_zorg.txt')
+f = open('./2021/input/03.txt')
 #f = open('./2021/input/03_sample.txt')
 lines = f.read().splitlines() 
 f.close()
