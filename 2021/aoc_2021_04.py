@@ -63,7 +63,7 @@ for b in boards:
     if num_moves < bestmoves:
         bestmoves = num_moves
         bestscore = [score]
-    elif num_moves == bestmoves and score > bestscore:
+    elif num_moves == bestmoves:
         bestscore.append(score)
 
     if num_moves > worstmoves:
