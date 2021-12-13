@@ -9,9 +9,6 @@ f.close()
 points = [[int(x) for x in l.split(',')] for l in lines if ',' in l]
 folds = [x for x in lines if 'fold' in x]
 
-def remdupes(points):
-    list
-
 part1 = -1
 for f in folds:
     c, n = (f.split()[2]).split('=')
