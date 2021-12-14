@@ -1,7 +1,7 @@
 # Advent of Code 2021 - Day 11
 # https://adventofcode.com/2021/day/11
 
-from typing import Deque
+from collections import deque
 
 f = open('./2021/input/11.txt')
 #f = open('./2021/input/11_sample.txt')
@@ -18,7 +18,7 @@ DELTA = [(-1,-1),(-1, 0), (-1, 1), (0,-1),(0,1),(1,-1),(1,0),(1,1)]
 part1 = 0
 part2 = 0
 for n in range(1000):
-    q = Deque()
+    q = deque()
     for r in range(ROWS):
         for c in range(COLS):
             g[r][c] += 1
